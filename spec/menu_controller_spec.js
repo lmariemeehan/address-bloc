@@ -6,6 +6,8 @@
 });
    describe("#getContactCount()", () => {
 
+   describe("#remindMe()", () => {
+
 // #2
      it("should return 0 when no contacts are in the book", () => {
        expect(this.menu.getContactCount()).toBe(0);
@@ -16,5 +18,10 @@
         expect(this.menu.getContactCount()).toBe(1)
       });
 
+      it("should return a string", () => {
+        expect(this.menu.remindMe()).toBe("Learning is a life-long pursuit.")
+      });
+
+    });
    });
  });
