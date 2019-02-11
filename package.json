@@ -4,7 +4,7 @@
   "description": "An application to model an address book in Node",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "export NODE_ENV=test && jasmine"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lmariemeehan/address-bloc/issues"
   },
-  "homepage": "https://github.com/lmariemeehan/address-bloc#readme"
+  "homepage": "https://github.com/lmariemeehan/address-bloc#readme",
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
 }
