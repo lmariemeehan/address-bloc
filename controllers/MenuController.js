@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
- 
+
  module.exports = class MenuController {
    constructor(){
    	this.mainMenuQuestions = [
@@ -15,7 +15,7 @@ const inquirer = require('inquirer');
    ];
    this.contacts = [];
   }
-  
+
   main(){
     console.log(`Welcome to AddressBloc!`);
     inquirer.prompt(this.mainMenuQuestions).then((response) => {
@@ -48,5 +48,9 @@ const inquirer = require('inquirer');
   exit(){
     console.log("Thanks for using AddressBloc!");
     process.exit();
+  }
+
+  getContactCount(){
+    return this.contacts.length;
   }
 }
