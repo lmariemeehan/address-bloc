@@ -58,7 +58,4 @@ const ContactController = require("./ContactController");
     process.exit();
   }
 
-  getContactCount(){
-    return this.contacts.length;
-  }
 }
