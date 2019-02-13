@@ -43,7 +43,7 @@ const ContactController = require("./ContactController");
   addContact(){
     this.clear();
     inquirer.prompt(this.book.addContactQuestions).then((answers) => {
-       this.book.addContact(answers.name, answers.phone).then((contact) => {
+       this.book.addContact(answers.name, answers.phone, answers.email).then((contact) => {
          console.log("Contact added successfully!");
          this.main();
        }).catch((err) => {
@@ -58,7 +58,4 @@ const ContactController = require("./ContactController");
     process.exit();
   }
 
-  getContactCount(){
-    return this.contacts.length;
-  }
 }
